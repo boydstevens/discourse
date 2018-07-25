@@ -14,7 +14,6 @@ data/
 
 .sass-cache/*
 public/csv/*
-public/plugins/*
 public/tombstone/*
 
 # Ignore bundler config
