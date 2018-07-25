@@ -1,4 +1,4 @@
-<div class='category-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='category-list notaclassnow' itemscope itemtype='http://schema.org/ItemList'>
   <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
   <% @category_list.categories.each_with_index do |c, index| %>
     <div class='category' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
@@ -13,7 +13,6 @@
     </div>
   <% end %>
 </div>
-<!-- IT WORKSES! -->
 <% content_for :title do %><%= @title %><% end %>
 
 <% content_for :head do %>
