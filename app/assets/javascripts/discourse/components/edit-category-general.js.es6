@@ -48,8 +48,8 @@ export default buildCategoryPanel("general", {
   @computed
   parentCategories() {
     return this.site
-      .get("categoriesList")
-      .filter(c => !c.get("parentCategory"));
+      .get("categoriesList");
+      //.filter(c => !c.get("parentCategory"));
   },
 
   @computed(

@@ -283,8 +283,8 @@ class Category < ActiveRecord::Base
       errors.add(:base, I18n.t("category.errors.self_parent")) if parent_category_id == id
       errors.add(:base, I18n.t("category.errors.uncategorized_parent")) if uncategorized?
 
-      grandfather_id = Category.where(id: parent_category_id).pluck(:parent_category_id).first
-      errors.add(:base, I18n.t("category.errors.depth")) if grandfather_id
+      #grandfather_id = Category.where(id: parent_category_id).pluck(:parent_category_id).first
+      #errors.add(:base, I18n.t("category.errors.depth")) if grandfather_id
     end
   end
 

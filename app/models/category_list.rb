@@ -99,7 +99,7 @@ class CategoryList
       category.has_children = category.subcategories.present?
     end
 
-    if @options[:parent_category_id].blank?
+    #if @options[:parent_category_id].blank?
       subcategories = {}
       to_delete = Set.new
       @categories.each do |c|
@@ -111,7 +111,7 @@ class CategoryList
       end
       @categories.each { |c| c.subcategory_ids = subcategories[c.id] }
       @categories.delete_if { |c| to_delete.include?(c) }
-    end
+    #end
 
     if @topics_by_category_id
       @categories.each do |c|
